@@ -33,7 +33,7 @@ func NewWorld(width int, height int, subdivide int) *World {
 }
 
 // Adds an Object to the objects map
-func (w *World) Register(o Object) {
+func (w *World) Add(o Object) {
     ids := w.HashIds(o)
     for _, id := range ids {
         w.Objects[id] = append(w.Objects[id], o)
@@ -43,7 +43,6 @@ func (w *World) Register(o Object) {
 // Removes references to Object from the Objects map
 func (w *World) Remove(o Object) {
     ids := w.HashIds(o)
-
     for _, id := range ids {
         for j, other := range w.Objects[id] {
             if o == other {
