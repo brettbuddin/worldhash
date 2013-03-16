@@ -28,6 +28,7 @@ func main() {
 
     world.Add(jerry)
     world.Add(newman)
+    world.Add(kramer)
 
     world.Nearby(jerry)
     // => []person{newman}
