@@ -42,3 +42,10 @@ func main() {
 }
 
 ```
+
+### TODO
+
+- Cleanup of empty slices
+- Complete resetting of the world hash
+- Examples of maintaining the hash via a Goroutine
+- Better support for moving objects?
