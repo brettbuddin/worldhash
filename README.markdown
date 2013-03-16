@@ -25,6 +25,7 @@ func main() {
 
     jerry  := &person{"Jerry", 100, 50, 5}
     newman := &person{"Newman", 90, 45, 5}
+    kramer := &person{"Kramar", 800, 800, 5}
 
     world.Add(jerry)
     world.Add(newman)
@@ -32,8 +33,12 @@ func main() {
     world.Nearby(jerry)
     // => []person{newman}
 
+    world.Nearby(kramer)
+    // => []person{}
+
     world.Remove(jerry)
     world.Remove(newman)
+    world.Remove(kramer)
 }
 
 ```
