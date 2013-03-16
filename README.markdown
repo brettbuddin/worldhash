@@ -31,10 +31,10 @@ func main() {
     world.Add(kramer)
 
     world.Nearby(jerry)
-    // => []person{newman}
+    // => []worldhash.Object{newman}
 
     world.Nearby(kramer)
-    // => []person{}
+    // => []worldhash.Object{}
 
     world.Remove(jerry)
     world.Remove(newman)
