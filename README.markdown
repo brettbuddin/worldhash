@@ -21,8 +21,7 @@ func (p *person) Radius() int {
 }
 
 func main() {
-    world   := &World{1000, 1000, 20}
-
+    world  := &World{1000, 1000, 20}
     jerry  := &person{"Jerry", 100, 50, 5}
     newman := &person{"Newman", 90, 45, 5}
     kramer := &person{"Kramar", 800, 800, 5}
