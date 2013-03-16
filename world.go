@@ -96,7 +96,7 @@ func (w *World) HashIds(o Object) []int {
         return append(slice, i)
     }
 
-    addTo := func(p point) {
+    add := func(p point) {
         id := int(math.Floor(float64(p.x / w.Subdivide))) + 
               int(math.Floor(float64(p.y / w.Subdivide))) * width
 
@@ -106,10 +106,10 @@ func (w *World) HashIds(o Object) []int {
     // make a list of all hash IDs that
     // are hit by the four corners of the
     // Object's bounding box
-    addTo(min)
-    addTo(point{min.x, max.y})
-    addTo(point{max.x, min.y})
-    addTo(point{max.x, max.y})
+    add(min)
+    add(point{min.x, max.y})
+    add(point{max.x, min.y})
+    add(point{max.x, max.y})
 
     return ids
 }
