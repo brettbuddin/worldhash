@@ -2,6 +2,7 @@ Simple implementation of spatial hashing.
 
 ```go
 type person struct {
+    name string
     x int
     y int
     radius int
@@ -21,17 +22,18 @@ func (p *person) Radius() int {
 
 func main() {
     world   := &World{1000, 1000, 20}
-    person1 := &person{100, 50, 5}
-    person2 := &person{90, 45, 5}
 
-    world.Add(person1)
-    world.Add(person2)
+    jerry  := &person{"Jerry", 100, 50, 5}
+    newman := &person{"Newman", 90, 45, 5}
 
-    world.Nearby(person1)
-    // => []person{person2}
+    world.Add(jerry)
+    world.Add(newman)
 
-    world.Remove(person1)
-    world.Remove(person2)
+    world.Nearby(jerry)
+    // => []person{newman}
+
+    world.Remove(jerry)
+    world.Remove(newman)
 }
 
 ```
