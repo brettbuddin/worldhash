@@ -106,10 +106,10 @@ func (w *World) HashIds(o Object) []int {
     // make a list of all hash IDs that
     // are hit by the four corners of the
     // Object's bounding box
-    add(min)
-    add(point{min.x, max.y})
-    add(point{max.x, min.y})
-    add(point{max.x, max.y})
+    add(point{min.x, max.y}) // top left
+    add(point{max.x, max.y}) // top right
+    add(point{max.x, min.y}) // bottom right
+    add(min)                 // bottom left
 
     return ids
 }
