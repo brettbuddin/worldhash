@@ -23,7 +23,7 @@ type World struct {
 }
 
 // Creates a new World
-func NewWorld(width int, height int, subdivide int) *World {
+func New(width int, height int, subdivide int) *World {
     return &World{
         Width: width,
         Height: height,

@@ -21,7 +21,7 @@ func (p *person) Radius() int {
 }
 
 func main() {
-    world  := worldhash.NewWorld(1000, 1000, 20)
+    world  := worldhash.New(1000, 1000, 20)
     jerry  := &person{"Jerry", 100, 50, 5}
     newman := &person{"Newman", 90, 45, 5}
     kramer := &person{"Kramer", 800, 800, 5}

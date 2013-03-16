@@ -24,7 +24,7 @@ func (p *person) Radius() int {
 }
 
 func buildWorld() (*World, []*person) {
-    world  := NewWorld(10, 10, 2)
+    world  := New(10, 10, 2)
 
     people := []*person{
         &person{"Jerry", 3, 2, 1}, 
